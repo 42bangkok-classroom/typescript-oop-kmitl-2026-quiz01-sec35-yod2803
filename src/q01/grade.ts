@@ -31,3 +31,7 @@ if (score >= 80) {
 }
 
 console.log(`Grade is ${grade}`);
+console.log(`Grade is ${grade}`);
+console.log(`Grade is ${grade}`);
+console.log(`Grade is ${grade}`);
+

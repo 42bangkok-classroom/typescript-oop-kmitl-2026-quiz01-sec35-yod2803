@@ -1,37 +1,32 @@
+const input = process.argv[2];
 
-
-const arg = process.argv[2]; 
-
-
-if (arg === undefined) {
-  console.log("Invalid Input");
-  process.exit(0);
+// ตรวจสอบว่ามีการส่งค่าเข้ามาหรือไม่
+if (!input) {
+    console.log("Invalid Input");
+    process.exit(1);
 }
 
-const score = Number(arg); 
+// แปลงเป็นตัวเลข
+const score = Number(input);
 
-
-if (Number.isNaN(score) || score < 0 || score > 100) {
-  console.log("Invalid Input");
-  process.exit(0);
+// ตรวจสอบว่าเป็นตัวเลขจริงหรือไม่ และอยู่ในช่วง 0-100
+if (isNaN(score) || score < 0 || score > 100) {
+    console.log("Invalid Input");
+    process.exit(1);
 }
 
+// กำหนดเกรดตามเกณฑ์
 let grade: string;
-
 if (score >= 80) {
-  grade = "A";
+    grade = "A";
 } else if (score >= 70) {
-  grade = "B";
+    grade = "B";
 } else if (score >= 60) {
-  grade = "C";
+    grade = "C";
 } else if (score >= 50) {
-  grade = "D";
+    grade = "D";
 } else {
-  grade = "F";
+    grade = "F";
 }
 
 console.log(`Grade is ${grade}`);
-console.log(`Grade is ${grade}`);
-console.log(`Grade is ${grade}`);
-console.log(`Grade is ${grade}`);
-
